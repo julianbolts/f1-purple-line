@@ -282,13 +282,13 @@ Bevy 2D uses X/Y, so for top-down view we use X and Z from the data (ignoring el
 - [x] Bevy app scaffold with plugins
 - [x] ECS components and resources defined
 - [x] Fetched 2025 US GP Austin data (Q: 20 drivers/285 laps, R: 20 drivers/1067 laps)
+- [x] Load session JSON on startup
+- [x] Render track outline from position data
 
 ### In Progress
 _(Nothing currently in progress)_
 
 ### Up Next
-- [ ] Load session JSON on startup
-- [ ] Render track outline from position data
 - [ ] Spawn car entities for selected drivers
 - [ ] Interpolate positions based on replay time
 - [ ] Playback controls (play/pause, speed)

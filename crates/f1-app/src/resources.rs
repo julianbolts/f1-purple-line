@@ -19,6 +19,19 @@ pub struct SessionData {
     pub session: Option<Session>,
 }
 
+/// Metadata for a session file found on disk.
+#[derive(Clone, Debug)]
+pub struct AvailableSession {
+    pub path: std::path::PathBuf,
+    pub name: String,
+}
+
+/// List of available sessions found in the data directory.
+#[derive(Resource, Default)]
+pub struct AvailableSessions {
+    pub sessions: Vec<AvailableSession>,
+}
+
 /// Replay control state.
 #[derive(Resource)]
 pub struct ReplayState {
@@ -60,3 +73,7 @@ pub struct SelectedTurn {
 pub struct ComparisonDrivers {
     pub driver_codes: Vec<String>,
 }
+
+/// Event to trigger loading of a session file.
+#[derive(Event)]
+pub struct LoadSession(pub std::path::PathBuf);

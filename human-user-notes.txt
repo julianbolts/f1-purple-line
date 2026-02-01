@@ -24,3 +24,7 @@ I think we want to load in data from the US GP in Austin Texas from 2025. Let's 
 
 Additionally, let's use `uv` to run the python app, rather than venv and pip. This is the preferred usage for our team. Go ahead and updaate the python instructions accordingly to referenece uv instead of python or pip... 
 
+
+## suggest prompt to handoff GUI creation to gemini
+
+ok, I am going to hand off the GUI creation to another agent. they will have access to the f1-race-replay python project and this one (rust, bevy). Come up with a system prompt for this agent. it will be running in with gemini-cli, so direct them to use Claude md and other aspects of this project. Ensure they use bevy ECS best practices. we will be cloning functionality, but limited to the data in the local file system (data/*). have the agent render the list of events (Austin 2025) and render the curcuit map.
