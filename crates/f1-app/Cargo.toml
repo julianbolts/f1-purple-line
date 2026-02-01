@@ -1,0 +1,17 @@
+[package]
+name = "f1-app"
+description = "F1 telemetry visualization and replay application"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "f1-purple-line"
+path = "src/main.rs"
+
+[dependencies]
+f1-data.workspace = true
+bevy.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+anyhow.workspace = true

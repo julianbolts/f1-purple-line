@@ -1,0 +1,13 @@
+# starting prompt with claude code (putting in text since it got lost mid-write)
+
+you are an experienced bevy and Rust game developer. today we are tasked with building a formula 1 telemetry data analyzer. it is heavily inspired by the [f1-race-replay](https://github.com/IAmTomShaw/f1-race-replay) project from the python community--note: this project makes use of the [fastf1](https://docs.fastf1.dev/index.html) project to get access to public formula 1 data. the data which it provides are for a given year and circuit, the qualifying and race lap data. each driver is available, and their x,y,z coordinates, the time of the sample, throttle % (1-100), brake % (0 or 100), gear number, speed (km/hr), and DRS status (on or off). 
+
+
+we want to first recreate this application's replay and comparison features in rust and bevy. be mindful of the design and to effectively use the ECS component architecture expected in bevy. 
+
+additional features we will add include: ability to create a turn area, which will be used to box in samples for turn analysis. Turn analysis will be further broken down into thirds: approach, apex, and exit. By default, one a turn's bounding boxes are established, we will go through all the laps x,y,z coordinates to filter only the samples that are relevant for that part of the lap. by default, we will sort ASC (fastest time in turn) on the whole lap area... but the user will be given the option to look into the subsegments (approach, apex, and entry) if different laps provide better time in each section (no need to offer sorting by subsection if the fastest turn was also the fastest in each subsection--it is redundant). That is the essence of our application's use case and how the driver / their team would use it to gain valuable insights on how to improve performance.
+
+
+for your first task, suggest how to organize this project into a rust workspace (or if some other structure exists, please suggest it). my thinking is to have separate crates for the GUI that the users will interact with (bevy), one for the fastf1 data wrapper, and one for the telemetry analysis. Help me sort through this project. Be pragmatic and do not over-engineer for the sake of over-engineering. 
+
+

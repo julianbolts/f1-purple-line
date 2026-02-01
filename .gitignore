@@ -1,1 +1,25 @@
+# Rust
 /target
+Cargo.lock
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Data cache (fastf1)
+data/.cache/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Session data (large files - optionally ignore)
+# data/*.json
