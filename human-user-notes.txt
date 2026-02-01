@@ -11,3 +11,16 @@ additional features we will add include: ability to create a turn area, which wi
 for your first task, suggest how to organize this project into a rust workspace (or if some other structure exists, please suggest it). my thinking is to have separate crates for the GUI that the users will interact with (bevy), one for the fastf1 data wrapper, and one for the telemetry analysis. Help me sort through this project. Be pragmatic and do not over-engineer for the sake of over-engineering. 
 
 
+# continuing after structuring the project and agent orchestration
+
+Great work. I think this will be helpful structure for future agents. Now let's return to the next steps you mentioned:
+
+* Fetch some real data: cd tools && pip install -r requirements.txt && python fetch_session.py --year 2024 --circuit Monaco --session Q
+* Implement track/car visualization in the replay plugin
+* Build the turn bounding box creation UI
+* Wire up the analysis display
+
+I think we want to load in data from the US GP in Austin Texas from 2025. Let's do both Qualifiying and race data, for all drivers in the 2025 weekend. 
+
+Additionally, let's use `uv` to run the python app, rather than venv and pip. This is the preferred usage for our team. Go ahead and updaate the python instructions accordingly to referenece uv instead of python or pip... 
+
