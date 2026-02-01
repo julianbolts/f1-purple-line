@@ -2,12 +2,11 @@
 """
 Fetch F1 session data using fastf1 and export to JSON for the Rust application.
 
-Usage:
-    python fetch_session.py --year 2024 --circuit "Monaco" --session Q
-    python fetch_session.py --year 2024 --circuit "Silverstone" --session R
+Usage (with uv):
+    uv run fetch_session.py --year 2025 --circuit Austin --session Q
+    uv run fetch_session.py --year 2025 --circuit Austin --session R
 
-Requirements:
-    pip install fastf1
+Dependencies managed via pyproject.toml (fastf1, pandas).
 """
 
 import argparse
@@ -47,7 +46,7 @@ def fetch_session(year: int, circuit: str, session_type: str, output_dir: Path):
 
     for driver in session.drivers:
         driver_info = session.get_driver(driver)
-        driver_laps = session.laps.pick_driver(driver)
+        driver_laps = session.laps.pick_drivers(driver)
 
         laps_data = []
         for _, lap in driver_laps.iterrows():

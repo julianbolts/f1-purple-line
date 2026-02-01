@@ -278,9 +278,10 @@ Bevy 2D uses X/Y, so for top-down view we use X and Z from the data (ignoring el
 - [x] Turn model with approach/apex/exit segments
 - [x] Analysis: `TurnAnalysis`, `TurnComparison`
 - [x] JSON loader
-- [x] Python data export script (fastf1)
+- [x] Python data export script (fastf1, uv-managed)
 - [x] Bevy app scaffold with plugins
 - [x] ECS components and resources defined
+- [x] Fetched 2025 US GP Austin data (Q: 20 drivers/285 laps, R: 20 drivers/1067 laps)
 
 ### In Progress
 _(Nothing currently in progress)_

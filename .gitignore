@@ -7,9 +7,11 @@ __pycache__/
 *.py[cod]
 .venv/
 venv/
+tools/.venv/
 
 # Data cache (fastf1)
 data/.cache/
+data/
 
 # IDE
 .idea/

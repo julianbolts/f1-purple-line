@@ -7,10 +7,11 @@ cargo run                     # Build and run
 cargo test -p f1-data         # Test core library
 ```
 
-To fetch sample data (requires Python + fastf1):
+To fetch session data (requires uv + Python):
 ```bash
-cd tools && pip install -r requirements.txt
-python fetch_session.py --year 2024 --circuit Monaco --session Q
+cd tools
+uv run fetch_session.py --year 2025 --circuit Austin --session Q
+uv run fetch_session.py --year 2025 --circuit Austin --session R
 ```
 
 ## Status
